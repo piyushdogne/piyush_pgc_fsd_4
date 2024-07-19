@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A Student Registration System to manage student details."
+    />
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Student Registration System</h1>
+      <p>Register, edit, and delete student details easily.</p>
+    </header>
+    <main>
+      <section class="form_section">
+        <h1>Registration Form</h1>
+        <form id="registrationForm">
+          <label for="studentName">Student Name:</label>
+          <input type="text" id="studentName" name="studentName" required />
+
+          <label for="studentId">Student ID:</label>
+          <input type="number" id="studentId" min="0" name="studentId" required />
+
+          <label for="emailId">Email ID:</label>
+          <input type="email" id="emailId" name="emailId" required />
+
+          <label for="contactNo">Contact No:</label>
+          <input
+            type="tel"
+            id="contactNo"
+            name="contactNo"
+            pattern="[0-9]{10}"
+            required
+          />
+
+          <button type="button" onclick="addStudent()">Add Student</button>
+        </form>
+        <h1>Github hosted website link <a href="https://github.com/piyushdogne/piyush_pgc_fsd_4" target="_blank">Click Here</a></h1>
+        <h1>Github repository link <a href="#">Click Here</a></h1>
+      </section>
+      <section id="displaySection">
+        <h2>Registered Students</h2>
+        <table id="studentTable">
+          <thead>
+            <tr>
+              <th>Student Name</th>
+              <th>Student ID</th>
+              <th>Email ID</th>
+              <th>Contact No</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="records-body">
+            <!-- Student records will appear here -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
